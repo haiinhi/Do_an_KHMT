@@ -3,12 +3,12 @@
 ## Hướng dẫn cài đặt và chạy dự án
 
 ### Bước 1: Tải và giải nén
-- Tải file **Do_an_KHMT.zip** về máy.
+- Clone **Do_an_KHMT.zip** về máy.
 - Giải nén file này ra thư mục **Do_an_KHMT**.
 
-### Bước 2: Tạo database
+### Bước 2: Import database
 - Mở **pgAdmin4** (hoặc công cụ quản lý PostgreSQL khác).
-- Tạo một database mới với tên:cosmetics 
+- Import database mới với tên:cosmetics 
 
 
 ### Bước 3: Cài đặt môi trường và chạy server
