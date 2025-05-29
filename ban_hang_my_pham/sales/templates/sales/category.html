@@ -1,0 +1,28 @@
+{% extends 'sales/base.html' %}
+{% load static %}
+
+<html>
+<head>
+</head>
+<body>
+    {% block register %}
+    <div class="row gx-4 gy-4 mt-4" style="width: 100%;">
+        {% for product in products %}
+        <div class="col-md-3">
+            <div class="card h-100 shadow-sm">
+                <img src="{{product.ImageURL}}" class="card-img-top" style="height: 200px; object-fit: contain;">
+                <div class="card-body text-center">
+                    <h6 class="card-title">{{product.name}}</h6>
+                    <p class="text-success">{{product.price | floatformat:3}} VND</p>
+                    <div class="d-flex justify-content-center gap-2 mt-2">
+                        <button data-product={{product.id}} data-action="add" class="btn btn-outline-secondary add-btn update-cart">Thêm vào giỏ</button>
+                        <a class="btn btn-outline-success" href="{% url 'detail' product.id %}">Xem</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% endblock register %}
+</body>
+</html>
